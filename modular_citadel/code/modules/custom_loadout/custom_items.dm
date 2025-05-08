@@ -209,15 +209,18 @@
 	desc = "Smells like reactor four."
 	icon = 'icons/obj/custom.dmi'
 	item_state = "stalker"
-	mob_overlay_icon = 'icons/mob/clothing/custom_w.dmi'
+	mob_overlay_icon = 'icons/mob/clothing/mask.dmi'
+	anthro_mob_worn_overlay = 'icons/mob/clothing/mask_muzzled.dmi'
 	icon_state = "stalker"
+	alternate_screams = RUSSIAN_SCREAMS
 
 /obj/item/clothing/mask/gas/military
 	name = "Military Gas Mask"
 	desc = "A rare PMC gas mask, one of the very expensive kinds. The inside looks comfortable to wear for a while. The blood red eyes however seem to stare back at you. Creepy."
 	icon = 'icons/obj/custom.dmi'
+	anthro_mob_worn_overlay = 'icons/mob/clothing/mask_muzzled.dmi'
 	item_state = "mgas"
-	mob_overlay_icon = 'icons/mob/clothing/custom_w.dmi'
+	mob_overlay_icon = 'icons/mob/clothing/mask.dmi'
 	icon_state = "mgas"
 
 /obj/item/reagent_containers/food/drinks/flask/steel
