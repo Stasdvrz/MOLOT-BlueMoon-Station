@@ -345,14 +345,15 @@
 	icon_state = "flagcape"
 	item_state = "flagcape"
 
-/obj/item/clothing/shoes/lucky
+/obj/item/clothing/shoes/jackboots/lucky
 	name = "Lucky Jackboots"
 	icon = 'icons/obj/custom.dmi'
 	mob_overlay_icon = 'icons/mob/clothing/custom_w.dmi'
+	anthro_mob_worn_overlay ='icons/mob/clothing/feet_digi.dmi'
 	desc = "Comfy Lucky Jackboots with the word Luck on them."
 	item_state = "luckyjack"
 	icon_state = "luckyjack"
-	mutantrace_variation = NONE
+
 
 /obj/item/clothing/under/custom/lunasune
 	name = "Divine Robes"
@@ -599,6 +600,7 @@
 	icon = 'icons/obj/custom.dmi'
 	item_state = "mmask"
 	mob_overlay_icon = 'icons/mob/clothing/custom_w.dmi'
+	anthro_mob_worn_overlay = 'icons/mob/clothing/mask_muzzled.dmi'
 	icon_state = "mmask"
 
 /obj/item/clothing/under/smaiden

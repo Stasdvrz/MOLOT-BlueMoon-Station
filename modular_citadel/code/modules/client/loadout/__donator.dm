@@ -485,7 +485,7 @@
 /datum/gear/donator/luckyjack
 	name = "Lucky Jackboots"
 	slot = ITEM_SLOT_BACKPACK
-	path = /obj/item/clothing/shoes/lucky
+	path = /obj/item/clothing/shoes/jackboots/lucky
 	ckeywhitelist = list()
 	donator_group_id = DONATOR_GROUP_TIER_1
 

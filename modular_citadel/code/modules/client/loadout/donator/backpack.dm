@@ -108,7 +108,7 @@
 
 /datum/gear/donator/backpack/luckyjack
 	name = "Lucky Jackboots"
-	path = /obj/item/clothing/shoes/lucky
+	path = /obj/item/clothing/shoes/jackboots/lucky
 	ckeywhitelist = list()
 
 /datum/gear/donator/backpack/m41
