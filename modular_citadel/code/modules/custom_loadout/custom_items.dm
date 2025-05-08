@@ -183,9 +183,12 @@
 	desc = "Sometimes things are too much to hide."
 	icon = 'icons/obj/custom.dmi'
 	mob_overlay_icon = 'icons/mob/clothing/custom_w.dmi'
+	anthro_mob_worn_overlay = 'icons/mob/clothing/mask_muzzled.dmi'
 	icon_state = "hheart"
 	item_state = "hheart"
+	clothing_flags = ALLOWINTERNALS
 	flags_inv = HIDEFACE|HIDEFACIALHAIR
+	mutantrace_variation = STYLE_MUZZLE
 
 /obj/item/clothing/suit/trenchcoat/green
 	name = "Reece's Great Coat"
@@ -307,7 +310,9 @@
 /obj/item/clothing/head/paperhat
 	name = "paperhat"
 	desc = "A piece of paper folded into neat little hat."
+	icon = 'icons/obj/clothing/hats.dmi'
 	icon_state = "paperhat"
+	mob_overlay_icon = 'icons/mob/clothing/custom_w.dmi'
 	item_state = "paperhat"
 
 /obj/item/clothing/suit/toggle/labcoat/mad/techcoat
@@ -533,16 +538,16 @@
 	mob_overlay_icon = 'icons/mob/clothing/custom_w.dmi'
 	mutantrace_variation = NONE
 
-/obj/item/toy/plush/mammal/dog/fritz
-	icon = 'icons/obj/custom.dmi'
-	icon_state = "fritz"
-	attack_verb = list("barked", "boofed", "shotgun'd")
-	obj_flags = UNIQUE_RENAME
-	unique_reskin = list(
-		"Goodboye" = list("icon_state" = "fritz"),
-		"Badboye" = list("icon_state" = "fritz_bad")
-	)
-	mutantrace_variation = NONE
+//obj/item/toy/plush/mammal/dog/fritz
+//	icon = 'icons/obj/custom.dmi'
+//	icon_state = "fritz"
+//	attack_verb = list("barked", "boofed", "shotgun'd")
+//	obj_flags = UNIQUE_RENAME
+//	unique_reskin = list(
+//		"Goodboye" = list("icon_state" = "fritz"),
+//		"Badboye" = list("icon_state" = "fritz_bad")
+//	)
+//	mutantrace_variation = NONE   //Нету у нас этого в спрайтах
 
 /obj/item/clothing/neck/cloak/polychromic/polyce
 	name = "polychromic embroidered cloak"

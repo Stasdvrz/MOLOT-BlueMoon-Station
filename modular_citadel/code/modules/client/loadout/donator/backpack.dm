@@ -116,11 +116,6 @@
 	path = /obj/item/toy/gun/m41
 	ckeywhitelist = list()
 
-/datum/gear/donator/backpack/fritzplush
-	name = "Fritz Plushie"
-	path = /obj/item/toy/plush/mammal/dog/fritz
-	ckeywhitelist = list()
-
 /datum/gear/donator/backpack/borgplush
 	name = "Robot Plush"
 	path = /obj/item/toy/plush/borgplushie
