@@ -387,7 +387,7 @@ There are several things that need to be remembered:
 			var/icon_chosen = 'icons/mob/clothing/hands.dmi'
 			if(dna.species.icon_hands)
 				icon_chosen = dna.species.icon_hands
-			overlays_standing[GLOVES_LAYER] = gloves.build_worn_icon(default_layer = GLOVES_LAYER, default_icon_file = icon_chosen)
+			overlays_standing[GLOVES_LAYER] = gloves.build_worn_icon(default_layer = GLOVES_LAYER, default_icon_file = icon_chosen, use_mob_overlay_icon = dna.species.icon_hands ? FALSE : TRUE)	//костыльный метод попытки починить тешарям униформы
 			gloves_overlay = overlays_standing[GLOVES_LAYER]
 			if(OFFSET_GLOVES in dna.species.offset_features)
 				gloves_overlay.pixel_x += dna.species.offset_features[OFFSET_GLOVES][1]
