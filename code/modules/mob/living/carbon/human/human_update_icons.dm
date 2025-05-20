@@ -451,7 +451,7 @@ There are several things that need to be remembered:
 				var/icon_chosen = 'icons/mob/clothing/eyes.dmi'
 				if(dna.species.icon_eyes)
 					icon_chosen = dna.species.icon_eyes
-				overlays_standing[GLASSES_LAYER] = glasses.build_worn_icon(default_layer = GLASSES_LAYER, default_icon_file = icon_chosen, override_state = glasses.icon_state)
+				overlays_standing[GLASSES_LAYER] = glasses.build_worn_icon(default_layer = GLASSES_LAYER, default_icon_file = icon_chosen, override_state = glasses.icon_state, use_mob_overlay_icon = dna.species.icon_eyes ? FALSE : TRUE)
 			var/mutable_appearance/glasses_overlay = overlays_standing[GLASSES_LAYER]
 			if(glasses_overlay)
 				if(OFFSET_GLASSES in dna.species.offset_features)
