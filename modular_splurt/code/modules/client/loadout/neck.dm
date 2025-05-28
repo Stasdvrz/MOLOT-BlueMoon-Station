@@ -146,7 +146,7 @@
 	restricted_roles = list("Chief Medical Officer","Medical Doctor","Virologist","Paramedic","Psychologist","Chemist")
 
 /datum/gear/neck/cloak/teshari/jobs/chemistry
-	name = "Teshari Paramedic Cloak"
+	name = "Teshari Chemist Cloak"
 	path = /obj/item/clothing/neck/cloak/teshari/jobs/chemistry
 	restricted_roles = list("Chief Medical Officer","Medical Doctor","Virologist","Paramedic","Psychologist","Chemist")
 
