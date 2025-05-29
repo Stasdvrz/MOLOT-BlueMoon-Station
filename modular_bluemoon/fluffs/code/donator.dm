@@ -605,7 +605,7 @@
 	subcategory = LOADOUT_SUBCATEGORIES_DON02
 
 /datum/gear/donator/bm/old_world_kit
-	name = "Old Power Armor Kit"
+	name = "Old Wolrd Blues Kit"
 	slot = ITEM_SLOT_BACKPACK
 	path = /obj/item/storage/box/old_world_kit
 	ckeywhitelist = list("stasdvrz", "vlonger")
