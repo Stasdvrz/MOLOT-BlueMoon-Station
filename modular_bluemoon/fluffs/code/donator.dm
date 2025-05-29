@@ -604,6 +604,13 @@
 	ckeywhitelist = list("stasdvrz", "Pingvas")
 	subcategory = LOADOUT_SUBCATEGORIES_DON02
 
+/datum/gear/donator/bm/old_world_kit
+	name = "Old Power Armor Kit"
+	slot = ITEM_SLOT_BACKPACK
+	path = /obj/item/storage/box/old_world_kit
+	ckeywhitelist = list("stasdvrz", "vlonger")
+	subcategory = LOADOUT_SUBCATEGORIES_DON02
+
 /datum/gear/donator/bm/money_100k
 	name = "Extra Money"
 	slot = ITEM_SLOT_BACKPACK
@@ -1046,6 +1053,20 @@
 	slot = ITEM_SLOT_ICLOTHING
 	path = /obj/item/modkit/dreadmk3_kit
 	ckeywhitelist = list("stasdvrz", "mrsko", "akinight")
+	subcategory = LOADOUT_SUBCATEGORIES_DON02
+
+/datum/gear/donator/bm/old_laser_kit
+	name = "AER9 Kit"
+	slot = ITEM_SLOT_ICLOTHING
+	path = /obj/item/modkit/old_laser_kit
+	ckeywhitelist = list("stasdvrz", "vlonger")
+	subcategory = LOADOUT_SUBCATEGORIES_DON02
+
+/datum/gear/donator/bm/institute_kit
+	name = "institute Kit"
+	slot = ITEM_SLOT_ICLOTHING
+	path = /obj/item/modkit/institute_kit
+	ckeywhitelist = list("stasdvrz", "vlonger")
 	subcategory = LOADOUT_SUBCATEGORIES_DON02
 
 /datum/gear/donator/bm/dedication_kit
