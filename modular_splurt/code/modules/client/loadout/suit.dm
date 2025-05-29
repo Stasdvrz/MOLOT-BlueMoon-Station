@@ -168,13 +168,13 @@
 	restricted_roles = list("Chief Engineer")
 
 /datum/gear/suit/hooded/teshari/beltcloak/jobs/engineer
-	name = "Chief Engineer belted cloak"
+	name = "Engineer belted cloak"
 	path = /obj/item/clothing/suit/hooded/teshari/beltcloak/jobs/engineer
 	subcategory = LOADOUT_SUBCATEGORY_SUIT_JOBS
 	restricted_roles = list("Chief Engineer","Station Engineer","Atmospheric Technician")
 
 /datum/gear/suit/hooded/teshari/beltcloak/jobs/atmos
-	name = "Chief Engineer belted cloak"
+	name = "Atmos belted cloak"
 	path = /obj/item/clothing/suit/hooded/teshari/beltcloak/jobs/engineer/atmos
 	subcategory = LOADOUT_SUBCATEGORY_SUIT_JOBS
 	restricted_roles = list("Chief Engineer","Atmospheric Technician","Station Engineer")
