@@ -790,7 +790,7 @@
 	name = "Лазер AER9 Kit"
 	desc = "A modkit for making a laser carbine into Лазер AER9."
 	product = /obj/item/gun/energy/laser/carbine/old
-	fromitem = list(/obj/item/gun/energy/laser/carbine/nopin, /obj/item/gun/energy/laser/carbine/)
+	fromitem = list(/obj/item/gun/energy/laser/carbine/nopin, /obj/item/gun/energy/laser/carbine)
 ////////////////////////////////////////////////////////////////////////////////////////
 /obj/item/storage/box/old_world_kit
 	name = "Old Wolrd Blues Kit"
