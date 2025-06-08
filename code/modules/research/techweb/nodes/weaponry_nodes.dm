@@ -64,6 +64,14 @@
 	design_ids = list("beamrifle")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 3250) // Sniper
 
+/datum/techweb_node/mil_beam_weapons
+	id = "mil_beam_weapons"
+	display_name = "Military Beam Weaponry"
+	description = "Military oriented Laser weapon system"
+	prereq_ids = list("beam_weapons")
+	design_ids = list("immolator")
+	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 15000) // Immolator
+
 /datum/techweb_node/explosive_weapons
 	id = "explosive_weapons"
 	display_name = "Explosive & Pyrotechnical Weaponry"
