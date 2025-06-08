@@ -2,14 +2,24 @@
 /datum/interaction/tailhug
 	description = "Обнять хвостом."
 	simple_message = "USER обнимает хвостом TARGET."
+	simple_style = "lewd"
 	required_from_user = INTERACTION_REQUIRE_TAIL
 	write_log_user = "tailhug"
 	write_log_target = "tailhuged by"
 	interaction_sound = 'sound/weapons/thudswoosh.ogg'
 
+/datum/interaction/tailhug/display_interaction(mob/living/user, mob/living/target)
+	..()
+	if(!HAS_TRAIT(user, TRAIT_LEWD_JOB))
+		new /obj/effect/temp_visual/heart(user.loc)
+	if(!HAS_TRAIT(target, TRAIT_LEWD_JOB))
+		new /obj/effect/temp_visual/heart(target.loc)
+
 /datum/interaction/tailweave
 	description = "Сплестись хвостами."
 	simple_message = "USER сплетается с хвостом TARGET."
+	simple_style = "lewd"
+	big_user_target_text = TRUE
 	required_from_user = INTERACTION_REQUIRE_TAIL
 	required_from_target = INTERACTION_REQUIRE_TAIL
 	write_log_user = "tailweaved"
@@ -22,6 +32,10 @@
 		target.emote("blush")
 	if(HAS_TRAIT(user, TRAIT_SHY) && prob(10))
 		user.emote("blush")
+	if(!HAS_TRAIT(user, TRAIT_LEWD_JOB))
+		new /obj/effect/temp_visual/heart(user.loc)
+	if(!HAS_TRAIT(target, TRAIT_LEWD_JOB))
+		new /obj/effect/temp_visual/heart(target.loc)
 
 /datum/interaction/selfhugtail
 	description = "Обнять свой хвост."
@@ -35,6 +49,7 @@
 /datum/interaction/lewd/slap/tail
 	description = "Хвост. Шлёпнуть по заднице хвостом."
 	simple_message = "USER с силой шлёпает задницу TARGET своим хвостом!"
+	big_user_target_text = TRUE
 	required_from_user = INTERACTION_REQUIRE_TAIL
 	write_log_user = "tail-ass-slapped"
 	write_log_target = "was tail-ass-slapped by"
@@ -46,6 +61,7 @@
 /datum/interaction/lewd/tail
 	description = "Хвост. Подрочить член."
 	simple_style = "lewd"
+	big_user_target_text = TRUE
 	required_from_user = INTERACTION_REQUIRE_TAIL
 	required_from_target_exposed = INTERACTION_REQUIRE_PENIS
 	p13target_emote = PLUG13_EMOTE_PENIS
@@ -200,7 +216,7 @@
 	interaction_flags = INTERACTION_FLAG_OOC_CONSENT | INTERACTION_FLAG_USER_IS_TARGET
 	write_log_user = "tailfucked own ass"
 	write_log_target = null
-	start_text	= "USER проталкивается в свой зад собственый хвостик."
+	start_text	= "USER проталкивает хвостик в свой зад."
 	help_text	= "USER скользит внутри своего кишечника при помощи хвоста."
 	grab_text	= "USER активно вбивается хвостом внутрь собственного ануса."
 	harm_text	= "USER насилует свой зад хвостом, словно стараясь прошить себя насквозь."
@@ -241,18 +257,19 @@
 	if(partner.getOxyLoss() > 40) //задушить и руками можно, это чисто ЕРП эмоут
 		oxy_damage = 0
 	if(user.a_intent == INTENT_HARM)
-		message = "грубо обхватывает своим хвостом шею [partner] стараясь перекрыть доступ к кислороду"
-		if(partner.is_fucking(partner, CUM_TARGET_TAIL))
+		message = "грубо обхватывает своим хвостом шею <b>\the [partner]</b> стараясь перекрыть доступ к кислороду"
+		if(partner.is_fucking(user, CUM_TARGET_TAIL))
 			var/affecting = partner.get_bodypart(BODY_ZONE_HEAD)
 			partner.apply_damage(1, BRUTE, affecting, partner.run_armor_check(affecting, MELEE))
-			message = "стягивая хвост вокруг шеи [partner] уже до хруста, активно меж тем стараясь не дать продохнуть"
+			message = "стягивая хвост вокруг шеи <b>\the [partner]</b> уже до хруста, активно меж тем стараясь не дать продохнуть"
 	else
-		message = "захватывает глотку [partner] своим хвостом стараясь перекрывать доступ к кислороду"
-		if(partner.is_fucking(partner, CUM_TARGET_TAIL))
-			message = "стягивает всё сильнее глотку [partner] своим хвостом в попытке перекрыть доступ к кислороду"
+		message = "захватывает глотку <b>\the [partner]</b> своим хвостом стараясь перекрывать доступ к кислороду"
+		if(partner.is_fucking(user, CUM_TARGET_TAIL))
+			message = "стягивает всё сильнее глотку <b>\the [partner]</b> своим хвостом в попытке перекрыть доступ к кислороду"
 
 	if(!HAS_TRAIT(partner, TRAIT_NOBREATH) && oxy_damage)
 		partner.apply_damage(oxy_damage, OXY)
+	partner.set_is_fucking(user, CUM_TARGET_TAIL)
 	user.visible_message(span_danger("<b>\The [user]</b> [message]."), ignored_mobs = user.get_unconsenting())
 	playlewdinteractionsound(get_turf(user), 'sound/weapons/thudswoosh.ogg', 50, 1, -1)
 	var/lust_amount = NORMAL_LUST //если наша цель довести до пика, то не стоит это закрывать за попытками увести в крит от удушья
