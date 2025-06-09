@@ -1045,14 +1045,14 @@
 	name = "AER9 Kit"
 	slot = ITEM_SLOT_ICLOTHING
 	path = /obj/item/modkit/old_laser_kit
-	ckeywhitelist = list("stasdvrz", "vlonger")
+	ckeywhitelist = list("stasdvrz", "vlonger", "vidl")
 	subcategory = LOADOUT_SUBCATEGORIES_DON02
 
 /datum/gear/donator/bm/institute_kit
 	name = "institute Kit"
 	slot = ITEM_SLOT_ICLOTHING
 	path = /obj/item/modkit/institute_kit
-	ckeywhitelist = list("stasdvrz", "vlonger")
+	ckeywhitelist = list("stasdvrz", "vlonger", "vidl")
 	subcategory = LOADOUT_SUBCATEGORIES_DON02
 
 /datum/gear/donator/bm/dedication_kit
