@@ -601,16 +601,16 @@
 	id = "immolator"
 	build_type = PROTOLATHE
 	materials = list(/datum/material/iron = 25000, /datum/material/glass = 25000, /datum/material/gold = 15000, /datum/material/silver = 14500, /datum/material/diamond = 15000, /datum/material/titanium = 16000)
-	build_path = /obj/item/storage/lockbox/weapon
+	build_path = /obj/item/storage/lockbox/weapon/immolator
 	category = list("Weapons")
 	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
 	min_security_level = SEC_LEVEL_RED
 
-/obj/item/storage/lockbox/weapon
+/obj/item/storage/lockbox/weapon/immolator
 	name = "Lockbox with Immolator Laser"
 	req_access = list(ACCESS_ARMORY)
 
-/obj/item/storage/lockbox/weapon/PopulateContents()
+/obj/item/storage/lockbox/weapon/immolator/PopulateContents()
 	new /obj/item/gun/energy/laser/hellgun/immolator/nopin(src)
 
 //////////
