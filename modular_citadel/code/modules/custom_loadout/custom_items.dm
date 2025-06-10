@@ -671,6 +671,8 @@
 	for(var/i in 1 to 20)
 		new /obj/item/coin/green(src)
 
+//Bluemood ADD
+
 /obj/item/clothing/head/assu_helmet/bp_helmet
 	name = "Old bullet proof helmet"
 	desc = "Old version style BP helmet. That helmet without armor plates soo without em that simple cool styled helmet"
@@ -678,3 +680,5 @@
 	icon = 'icons/obj/clothing/hats.dmi'
 	mutantrace_variation = STYLE_MUZZLE
 	flags_inv = HIDEEARS | HIDESNOUT | HIDEHAIR
+
+//Bluemood End
