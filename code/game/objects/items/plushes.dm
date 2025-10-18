@@ -1032,3 +1032,15 @@ GLOBAL_LIST_INIT(valid_plushie_paths, valid_plushie_paths())
 		playsound(user, 'sound/items/squeaktoy.ogg', 20, 1)
 		SEND_SIGNAL(user, COMSIG_ADD_MOOD_EVENT, "plushpet", /datum/mood_event/plushpet)
 		cooldown = world.time
+
+/obj/item/toy/plush/bm/fred
+	name = "Fred"
+	desc = "Это камень. Его зовут Фред."
+	icon_state = "fred"
+	attack_verb = list("Smash")
+
+/obj/item/toy/plush/bm/roxie
+	name = "Roxie"
+	desc = "Это камень. Ее зовут Рокси. Выглядит миленько с бантиком."
+	icon_state = "roxie"
+	attack_verb = list("Smash")
