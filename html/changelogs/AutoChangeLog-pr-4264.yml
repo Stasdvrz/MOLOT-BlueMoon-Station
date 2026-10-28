@@ -1,0 +1,5 @@
+author: DuLL-FoX
+delete-after: true
+changes:
+  - code_imp: превью персонажа в лобби и настройке персонажа больше не вызывает фризы
+      сервера
