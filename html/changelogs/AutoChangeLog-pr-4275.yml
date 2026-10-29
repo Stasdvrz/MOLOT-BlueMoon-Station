@@ -1,5 +1,0 @@
-author: DuLL-FoX
-delete-after: true
-changes:
-  - code_imp: эхолокация больше не вызывает фриз сервера при щелчке
-  - code_imp: меню крафта и загрузка мира стали чуть быстрее
