@@ -141,10 +141,6 @@
 	if(mind_traits)
 		for(var/t in mind_traits)
 			ADD_TRAIT(spawned.mind, t, JOB_TRAIT)
-		// BLUEMOON ADD - Медицинский персонал умеет работать
-	// с доступными медицинскими интерфейсами при потере зрения.
-	if(spawned.mind && ((departments & DEPARTMENT_BITFLAG_MEDICAL) || istype(src, /datum/job/psychologist) || istype(src, /datum/job/brigdoc)))
-		ADD_TRAIT(spawned.mind, TRAIT_MEDICAL_DEVICE_INTERFACE, JOB_TRAIT)
 	if(/datum/quirk/paraplegic in blacklisted_quirks)
 		spawned.regenerate_limbs() //if you can't be a paraplegic, attempt to regenerate limbs to stop amputated limb selection
 		spawned.set_resting(FALSE, TRUE) //they probably shouldn't be on the floor because they had no legs then suddenly had legs
